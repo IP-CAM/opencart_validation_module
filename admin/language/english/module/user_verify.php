@@ -12,5 +12,7 @@ $_['text_enabled']      = 'Enable Verify';
 $_['text_disabled']     = 'Disable Verify';
 $_['entry_status']      = 'Verify Status';
 $_['text_success']      = 'Success: You have modified User Verify module!';
+$_['entry_maxcount']    = 'Enter max count of selling products';
+$_['error_maxcount']    = 'Maxcount is wrong!';
 
 
