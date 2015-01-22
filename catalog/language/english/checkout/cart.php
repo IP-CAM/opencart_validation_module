@@ -25,6 +25,7 @@ $_['text_payment_recurring']   = 'Payment Profile';
 $_['text_trial_description']   = '%s every %d %s(s) for %d payment(s) then';
 $_['text_payment_description'] = '%s every %d %s(s) for %d payment(s)';
 $_['text_payment_cancel']      = '%s every %d %s(s) until canceled';
+$_['text_validation']          = 'Validate you profile';
 
 // Column
 $_['column_image']             = 'Image';
