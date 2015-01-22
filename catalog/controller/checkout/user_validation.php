@@ -14,7 +14,9 @@ class ControllerCheckoutUserValidation extends Controller{
         $data['entry_coupon'] = $this->language->get('entry_coupon');
         $data['button_coupon'] = $this->language->get('button_coupon');
         $data['entry_imagefile']= $this->language->get('entry_imagefile');
-        $data['send_imagefile']= $this->language->get('send_imagefile');
+        $data['send_imagefile'] = $this->language->get('send_imagefile');
+        $data['text_loading'] = $this->language->get('text_loading');
+        $data['button_upload'] =$this->language->get('button_upload');
 
 
         $data['button_image_add'] = $this->language->get('button_image_add');
@@ -30,13 +32,9 @@ class ControllerCheckoutUserValidation extends Controller{
         $this->load->model('tool/image');
 
         if ($this->request->server['REQUEST_METHOD'] == 'POST') {
-            $this->model_catalog_product->addProduct($this->request->post);
+
 
             $this->session->data['success'] = $this->language->get('text_success');
-
-
-
-
 
 
         }

@@ -16,3 +16,5 @@ $_['entry_imagefile']   = 'Put your image file here';
 
 $_['send_imagefile']    = 'Send file';
 $_['button_image_add']  = 'Add image to message';
+$_['text_loading']      = 'Loading Image File';
+$_['button_upload']     = 'Load image file';
