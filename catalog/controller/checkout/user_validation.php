@@ -9,6 +9,7 @@
 class ControllerCheckoutUserValidation extends Controller{
     public function index(){
         $this->load->language('checkout/user_validation');
+
         $data['heading_title'] = $this->language->get('heading_title');
         $data['text_loading'] = $this->language->get('text_loading');
         $data['entry_coupon'] = $this->language->get('entry_coupon');
@@ -21,6 +22,9 @@ class ControllerCheckoutUserValidation extends Controller{
 
         $data['button_image_add'] = $this->language->get('button_image_add');
 
+
+        $data['account'] = $this->customer->getEmail();
+
         if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/user_validation.tpl')) {
            return $this->load->view($this->config->get('config_template') . '/template/checkout/user_validation.tpl', $data);
         } else {
@@ -29,12 +33,16 @@ class ControllerCheckoutUserValidation extends Controller{
     }
     public function add(){
         $this->load->model('checkout/user_validation');
-        $this->load->model('tool/image');
+
+
 
         if ($this->request->server['REQUEST_METHOD'] == 'POST') {
 
+            print_r('Controller2');
 
-            $this->session->data['success'] = $this->language->get('text_success');
+
+
+           $this->model->addValidation(1,1);
 
 
         }

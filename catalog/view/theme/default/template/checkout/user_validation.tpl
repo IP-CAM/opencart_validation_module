@@ -8,6 +8,7 @@
             <div class="input-group">
             <button type="button" id="button-upload" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-default btn-block"><i class="fa fa-upload"></i> <?php echo $button_upload; ?></button>
             <input type="hidden" name="validation-image" value="" id="load-image" />
+                <input type="hidden" name="user_id" value="<?= $account?>" id="id" />
 
 
             </div>
@@ -69,9 +70,30 @@
         }, 500);
     });
     //--></script>
-<script type="text/javascript"><!--
-    $('button[id^=\'button-send-image\']').on('click', function() {
-        console.log('Image send');
-    }
-            //-->
+<script type="text/javascript">
+    $("#button-send-image").on('click', function() {
+        var image=$('#load-image').val();
+        var user_id='';
+        $.ajax({
+            url: 'index.php?route=checkout/user_validation/add',
+            type: 'post',
+            dataType: 'json',
+            data: {image:image, user_id:user_id},
+            cache: false,
+            contentType: false,
+            processData: false,
+
+            success: function(json) {
+
+
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+
+            }
+        });
+
+
+
+    })
+
 </script>
